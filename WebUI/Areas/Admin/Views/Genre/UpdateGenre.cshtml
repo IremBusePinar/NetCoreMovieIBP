@@ -1,0 +1,24 @@
+﻿@model DataAccess.Entity.Genre
+@{
+    ViewData["Title"] = "UpdateGenre";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="m-4">
+    <form asp-action="UpdateGenre" method="post">
+
+
+        <div class="form-group">
+            <label asp-for="GenreName">  </label>
+            <input asp-for="GenreName" class="form-control" />
+
+          
+
+            <label asp-for="IsActive">Tür Aktif mi?</label>
+            <input asp-for="IsActive" class="radio-button" />
+
+            <button type="submit" value="Submit" class="btn btn-success"> Güncelle </button>
+        </div>
+
+    </form>
+</div>

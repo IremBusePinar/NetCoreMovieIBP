@@ -44,5 +44,30 @@ namespace WebUI.Areas.Admin.Controllers
 
         }
 
+        public IActionResult UpdateGenre()
+        {
+            return View();
+
+        }
+        [HttpPost]
+        public IActionResult UpdateGenre(Genre genre)
+        {
+            genreRepository.UpdateGenre(genre);
+
+            return RedirectToAction("Index");
+        }
+
+      
+
+        [HttpPost]
+        public IActionResult DeleteGenre(int genreId)
+        {
+            genreRepository.DeleteGenre(genreId);
+            
+            return RedirectToAction("Index");
+
+        }
+     
+
     }
 }

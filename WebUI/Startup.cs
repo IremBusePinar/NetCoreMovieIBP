@@ -61,6 +61,7 @@ namespace WebUI
             services.AddTransient<IGenreRepository, GenreRepository>();
             services.AddTransient<IMovieRepository, MovieRepository>();
             services.AddTransient<ISaloonRepository, SaloonRepository>();
+            
 
 
             services.AddControllersWithViews();
